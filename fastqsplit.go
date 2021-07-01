@@ -55,7 +55,7 @@ func main() {
 				_, ok := targets[lane]
 				if !ok {
 					filename_components := strings.Split(filename, "_")
-					target_filename := fmt.Sprintf("%s_%s_%s", strings.Join(filename_components[0:len(filename_components)-1], "_"), lane, filename_components[len(filename_components)-1])
+					target_filename := fmt.Sprintf("%s_%s_%s", strings.Join(filename_components[0:len(filename_components)-1], "_"), "L00", lane, filename_components[len(filename_components)-1])
 					target_file, err := os.Create(target_filename)
 					check_result(err)
 					defer target_file.Close()
